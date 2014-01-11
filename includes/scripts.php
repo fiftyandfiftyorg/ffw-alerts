@@ -28,4 +28,4 @@ function ffw_alerts_load_plugin_scripts() {
   
 
 }
-add_action('wp_enqueue_scripts', 'ffw_alerts_load_plugin_scripts');
+//add_action('wp_enqueue_scripts', 'ffw_alerts_load_plugin_scripts');
