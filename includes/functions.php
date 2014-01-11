@@ -33,7 +33,7 @@ function ffw_display_alerts()
   echo $ffw_display_alerts;
 
 }
-add_action( 'ffw_alerts_output', 'ffw_display_alerts' );
+add_action( 'wp_footer', 'ffw_display_alerts' );
 
 /**
  * Get the Alerts and output them to do_action( 'ffw_alerts_output' ) in the header
@@ -71,4 +71,4 @@ function ffw_get_alerts()
 
     echo $ffw_display_alert_trigger;
 }
-add_action( 'ffw_alerts_output', 'ffw_get_alerts' );
+add_action( 'wp_footer', 'ffw_get_alerts' );

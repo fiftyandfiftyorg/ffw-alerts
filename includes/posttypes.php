@@ -152,11 +152,6 @@ function ffw_alerts_updated_messages( $messages ) {
 }
 add_filter( 'post_updated_messages', 'ffw_alerts_updated_messages' );
 
-add_action( 'admin_menu', 'adjust_the_wp_menu', 999 );
 
-function ffw_alerts_adjust_the_wp_menu() {
-  //$page = remove_submenu_page( 'edit.php?post_type=dntly_campaigns', 'post-new.php?post_type=dntly_campaigns' );
-  // $page[0] is the menu title
-  // $page[1] is the minimum level or capability required
-  // $page[2] is the URL to the item's file
-}
+
+
