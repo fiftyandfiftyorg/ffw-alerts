@@ -16,16 +16,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 function ffw_alerts_load_plugin_scripts() {
     
-    
- 
+    // Enqueue jQuery
     wp_enqueue_script('jquery');
     
-    wp_register_script('ffw_alerts_front', FFW_ALERTS_PLUGIN_URL . 'assets/js/ffw-alerts-front.js', array( 'jquery' ), FFW_ALERTS_VERSION, true );
-    wp_enqueue_script( 'ffw_alerts_front' );
+    // Register Scripts / Styles
+    wp_register_script('ffw_alert_front_js', FFW_ALERTS_PLUGIN_URL . 'assets/js/ffw-alerts-front.js', array( 'jquery' ), FFW_ALERTS_VERSION, true );
+    wp_register_style( 'ffw_alert_front_css' FFW_ALERTS_PLUGIN_URK . 'assets/js/ffw-alerts-front.css', true );
 
-    wp_enqueue_style('ffw_faqs_styles', FFW_ALERTS_PLUGIN_URL . 'assets/css/ffw-alerts-front.css');
-
+    // Enqueue Sripts / Styles
+    wp_enqueue_style( 'ffw_alerts_front_styles' );
+    wp_enqueue_script( 'ffw_alerts_front_js' );
   
 
 }
-//add_action('wp_enqueue_scripts', 'ffw_alerts_load_plugin_scripts');
+add_action('wp_enqueue_scripts', 'ffw_alerts_load_plugin_scripts');
