@@ -33,6 +33,18 @@
 
 
     /* ALERT BAR
+    /* Example
+    /* ----------
+    <a 
+        id="ffw_alert_<?php the_ID(); ?>" 
+        href="#alert" 
+        class="btn yellow hide" 
+        data-local-storage-id="ffw_alerts_<?php the_ID(); ?>" 
+        data-trigger-method="onpageload" 
+        data-title="<?php the_title(); ?>" 
+        data-content="<?php echo get_the_excerpt(); ?>">
+        Test Alert
+     </a>
     ================================================== */
     FFW.alertBar = function(duration) {
 
@@ -65,8 +77,8 @@
               , content           = $this.data('content')
               , title             = $this.data('title')
               , local_storage_id  = $this.data('local-storage-id')
-              , header            = FFW.el.header_nav
-              , page_wrap         = FFW.el.page_wrap;
+              , header            = $('header#nav')
+              , $page_wrap        = $('#page_wrap');
             
             // if there are not any existing alerts in the alert container, and if local storage key is not false
             if ( $('#alerts .alert').length <= 0  && localStorage['FFWW_' + local_storage_id] != 'false' ) {
@@ -90,8 +102,8 @@
                     alert_close
                         .addClass('show')
                         .animate({ 'top' : '48px' }, 50);
-                    page_wrap.animate({ 'top' : ''+alert_offset+'px' });
-                }, duration)
+                    $('#page_wrap').animate({ 'top' : ''+alert_offset+'px' });
+                }, duration);
             }
 
         });
@@ -102,7 +114,8 @@
             var alerts      = FFW.el.alerts
               , page_wrap   = FFW.el.page_wrap
               , ls_prefix   = 'FFWW_'
-              , ls_key      = $('#alerts .alert').data('ls-id');
+              , ls_key      = $('#alerts .alert').data('ls-id')
+              , page_wrap   = $('#page_wrap');
 
               console.log($('#alerts .alert').data('ls-id'));
 
