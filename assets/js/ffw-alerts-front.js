@@ -51,7 +51,7 @@
                     $this.click();
                 });
             }
-        });
+        }); 
 
 
         alert_btns.click(function (event) {
