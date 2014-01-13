@@ -32,14 +32,12 @@
 
 
 
-
-
     /* ALERT BAR
     ================================================== */
     FFW.alertBar = function(duration) {
 
         // vars
-        var alert_btns = $('a[href="#alert');
+        var alert_btns = $('a[href="#alert"]');
 
         // duration used throughout various animations, setTimeouts, etc
         duration = 250;
