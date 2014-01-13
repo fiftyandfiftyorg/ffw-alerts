@@ -25,7 +25,7 @@ function ffw_alerts_load_plugin_scripts() {
 
 
     // Enqueue Sripts / Styles
-    wp_enqueue_style( 'ffw_alerts_front_styles' );
+    wp_enqueue_style( 'ffw_alerts_front_css' );
     wp_enqueue_script( 'ffw_alerts_front_js' );
   
 
