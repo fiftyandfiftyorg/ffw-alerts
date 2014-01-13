@@ -26,7 +26,6 @@
         // Theme specific elements
         FFW.el.alerts                = $('#alerts');
         FFW.el.alert                 = $('#alerts .alert');
-        FFW.el.landing_panel         = $('#landing_panel');
 
     };
 
