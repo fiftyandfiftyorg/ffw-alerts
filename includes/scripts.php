@@ -23,7 +23,7 @@ function ffw_alerts_load_plugin_scripts() {
     wp_register_script('ffw_alerts_front_js', FFW_ALERTS_PLUGIN_URL . 'assets/js/ffw-alerts-front.js', array( 'jquery' ), FFW_ALERTS_VERSION, true );  
     wp_register_style( 'ffw_alerts_front_css', FFW_ALERTS_PLUGIN_URL . 'assets/css/ffw-alerts-front.css', true );
 
-
+    
     // Enqueue Sripts / Styles
     wp_enqueue_style( 'ffw_alerts_front_css' );
     wp_enqueue_script( 'ffw_alerts_front_js' );
