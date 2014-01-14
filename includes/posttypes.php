@@ -45,19 +45,20 @@ function setup_ffw_alerts_post_types() {
     }
 
     $ffw_alerts_args = array(
-        'labels'            => $ffw_alerts_labels,
-        'public'            => true,
-        'publicly_queryable'=> true,
-        'show_ui'           => true,
-        'show_in_menu'      => true,
-        'menu_icon'         => 'dashicons-flag',
-        'query_var'         => true,
-        'rewrite'           => $rewrite,
-        'map_meta_cap'      => true,
-        'has_archive'       => $archives,
-        'show_in_nav_menus' => true,
-        'hierarchical'      => false,
-        'supports'          => apply_filters( 'ffw_alerts_supports', array( 'title', 'excerpt' ) ),
+        'labels'              => $ffw_alerts_labels,
+        'public'              => true,
+        'exclude_from_search' => true,
+        'publicly_queryable'  => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_icon'           => 'dashicons-flag',
+        'query_var'           => true,
+        'rewrite'             => $rewrite,
+        'map_meta_cap'        => true,
+        'has_archive'         => $archives,
+        'show_in_nav_menus'   => true,
+        'hierarchical'        => false,
+        'supports'            => apply_filters( 'ffw_alerts_supports', array( 'title', 'excerpt' ) ),
     );
     register_post_type( 'ffw_alerts', apply_filters( 'ffw_alerts_post_type_args', $ffw_alerts_args ) );
     
