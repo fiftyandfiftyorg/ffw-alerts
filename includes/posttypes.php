@@ -52,6 +52,7 @@ function setup_ffw_alerts_post_types() {
         'show_ui'             => true,
         'show_in_menu'        => true,
         'menu_icon'           => 'dashicons-flag',
+        'menu_position'     => '34.5',
         'query_var'           => true,
         'rewrite'             => $rewrite,
         'map_meta_cap'        => true,
