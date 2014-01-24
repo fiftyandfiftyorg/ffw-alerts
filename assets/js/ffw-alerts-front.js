@@ -101,7 +101,9 @@
                     alert_close
                         .addClass('show')
                         .animate({ 'top' : '48px' }, 50);
-                    $('#page_wrap').animate({ 'top' : ''+alert_offset+'px' });
+                    $('#page_wrap')
+                        .attr('style', 'position:relative;')
+                        .animate({ 'top' : ''+alert_offset+'px' });
                 }, duration);
             }
 
