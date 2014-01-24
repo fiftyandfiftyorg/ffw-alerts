@@ -96,7 +96,7 @@
                 // move down the header nav using the page_wrap (keep alerts outside it)
                 setTimeout(function (e) {
 
-                    var alert_offset = $('#alerts .alert').outerHeight() + 10;
+                    var alert_offset = $('#alerts .alert').outerHeight();
 
                     alert_close
                         .addClass('show')
