@@ -101,3 +101,29 @@ a[href="#alert"].hide {
   color: #303030;
   border-color: #303030;
 }
+
+
+/* MEDIA QUERIES
+============================================== */
+@media only screen and (max-width: 767px) {
+  #alerts {}
+  #alerts .alert {
+    display: block;
+    padding: 20px 10px;
+  }
+  #alerts .alert #alert_close {
+    top: 30px;
+    right: 20px;
+  }
+  #alerts .alert .alert-title {
+    float: none;
+    margin:0 0 5px 0;
+  }
+  #alerts .alert .alert-content { 
+    width: 100%;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
